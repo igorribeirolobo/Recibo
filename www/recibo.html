@@ -1,0 +1,89 @@
+    
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Payment Form Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } 
+    function queryObj() {
+    var result = {}, keyValuePairs = location.search.slice(1).split("&");
+    keyValuePairs.forEach(function(keyValuePair) {
+        keyValuePair = keyValuePair.split('=');
+        result[decodeURIComponent(keyValuePair[0])] = decodeURIComponent(keyValuePair[1]) || '';
+    });
+    return result;
+}
+var myParam = queryObj();
+    </script>
+<!-- //for-mobile-apps -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='//fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Alegreya+Sans:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="xdk/init-dev.js"></script>
+    <script type="text/javascript" src="js/salvar.js"></script>
+    <script src="ios.js"></script><script src="android.js"></script>
+    <script src="cordova.js" id="xdkJScordova_"></script>
+<script src="http://debug-software.intel.com/target/target-script-min.js#IGVlWvPDi2hQ_lx0tKHHaturdQBdiyPQGaw36sTVtSU"></script>
+   
+</head>
+<body>
+	<div class="main">
+		<div class="content">
+			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+					<script type="text/javascript">
+						$(document).ready(function () {
+							$('#horizontalTab').easyResponsiveTabs({
+								type: 'default', //Types: default, vertical, accordion           
+								width: 'auto', //auto or any width like 600px
+								fit: true   // 100% fit in a container
+							});
+						});
+						
+					</script>
+						<div class="sap_tabs">
+							<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+								<div class="pay-tabs">
+									<h2>Selecione o tipo de Recibo</h2>
+									  <ul class="resp-tabs-list">
+                                          <a href="index.html"><li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span><label class="pic1"></label>Recibo</span></li></a>
+										  <div class="clear"></div>
+									  </ul>	
+								</div>
+								<div class="resp-tabs-container">
+									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+										<div class="payment-info">
+                                            <script>var data = new Date;
+                                                monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro");
+ </script>
+                                           <label><center><h3><u>R E C I B O</u></h3></center> <p align=”Justify”>Recibo R$ ***<script>document.write(myParam["valor"]);</script>***<br /><br /> Recebi(emos) de <script>document.write(myParam["nomepagador"].replace("+"," "));</script>- CPF/CNPJ n°<script>document.write(myParam["idpagador"].replace("+"," "));</script>, a importância supra de: ***(<script>document.write(myParam["valor_ext"].replace("+"," "));</script>)*** - referente a: <script>document.write(myParam["referente"].replace("+"," "))</script>. E, para maior clareza firmo o presente recibo para que produza os seus efeitos, dando plena, rasa e irrevogável quitação, pelo valor recebido.Pagamento efetuado através do cheque n°: <script>document.write(myParam["n"])</script> do Banco: <script>document.write(myParam["banco"])</script> Agência: <script>document.write(myParam["ag"])</script>.Para todos os fins de direito, a validade do presente Recibo fica condicionada ao recebimento do cheque acima identificado.</p><p align=”right”><script>document.write(myParam["cidade"].replace("+"," "))</script>,<script>document.write(data.getDate()+" de "+ monName[data.getMonth()]+" de "+data.getFullYear())</script>,<script>document.write(myParam["nome_emitente"].replace("+"," ").replace("+"," "))</script>  RG/IE n° <script>document.write(myParam["rg_emitente"])</script> CPF/CNPJ n° <script>document.write(myParam["id_emitente"])</script></p></label>
+                                                <div class="single-bottom">	
+                                                <br /><br /><p><a onclick="email()" >Email</a>  <a onclick="sms()">Sms</a>  <a onclick="salvar()">Salvar</a></p>
+                                               <script>
+                                                   function email(){
+   intel.xdk.device.sendEmail("<label><center><h3><u>R E C I B O</u></h3></center><p align='Justify'>Recibo R$ ***"+myParam["valor"]+"***<br /><br /> Recebi(emos) de "+myParam["nomepagador"].replace("+"," ")+"- CPF/CNPJ n°"+myParam["idpagador"]+", a importância supra de: ***("+myParam["valor_ext"]+")*** - referente a: "+myParam["referente"].replace("+"," ")+". E, para maior clareza firmo o presente recibo para que produza os seus efeitos, dando plena, rasa e irrevogável quitação, pelo valor recebido.Pagamento efetuado através do cheque n°: "+myParam["n"]+" do Banco: "+myParam["banco"]+" Agência: "+myParam["ag"]+".Para todos os fins de direito, a validade do presente Recibo fica condicionada ao recebimento do cheque acima identificado.</p><p align=”right”>"+myParam["cidade"].replace("+"," ")+","+data.getDate()+" de "+ monName[data.getMonth()]+" de "+data.getFullYear()+","+myParam["nome_emitente"].replace("+"," ")+"  RG/IE n° "+myParam["rg_emitente"]+" CPF/CNPJ n° "+myParam["id_emitente"]+"</p></label>",myParam["email_pagador"]+","+myParam["email_emitente"],"Recibo Eletrônico",true);}</script>
+             <script>function sms(){intel.xdk.device.sendSMS("Recibo R$ ***"+myParam["valor"]+"***  Recebi(emos) de "+myParam["nome_pagador"].replace("+","  ")+"- CPF/CNPJ n°"+myParam["id_pagador"]+", a importância supra de: ***("+myParam["valor_ext"]+")*** - referente a: "+myParam["referente"].replace("+"," ")+". E, para maior clareza firmo o presente recibo para que produza os seus efeitos, dando plena, rasa e irrevogável quitação, pelo valor recebido.Pagamento efetuado através do cheque n°: "+myParam["n"]+" do Banco: "+myParam["banco"]+" Agência: "+myParam["ag"]+".Para todos os fins de direito, a validade do presente Recibo fica condicionada ao recebimento do cheque acima identificado. "+myParam["cidade"].replace("+"," ")+", "+data.getDate()+" de "+ monName[data.getMonth()]+" de "+data.getFullYear()+","+myParam["nome_emitente"].replace("+"," ")+"  RG/IE n° "+myParam["rg_emitente"]+" CPF/CNPJ n° "+myParam["id_emitente"],myParam["celular_pagador"])}</script>                                       
+											</div>
+										</div>
+                                    </div>
+								</div>	
+							</div>
+						</div>	
+
+		</div>
+	</div>
+</body>
+</html>

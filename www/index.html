@@ -1,0 +1,161 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Payment Form Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='//fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Alegreya+Sans:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/exibir-cliente.js"></script>
+    <script type="text/javascript" src="js/bd-user.js"></script>
+    <script type="text/javascript" src="js/selecao.js"></script>
+    <script type="text/javascript" src="js/recibo.js"></script>
+    <script type="text/javascript" src="js/exibir_recibo.js"></script>
+    <script type="text/javascript" src="js/exibir-usuario.js"></script>
+<script src="http://debug-software.intel.com/target/target-script-min.js#IGVlWvPDi2hQ_lx0tKHHaturdQBdiyPQGaw36sTVtSU"></script>
+    </head>
+<body onload="Usuario()">
+	
+    <div class="main">
+		<div class="content">
+			
+			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+					<script type="text/javascript">
+						$(document).ready(function () {
+							$('#horizontalTab').easyResponsiveTabs({
+								type: 'default', //Types: default, vertical, accordion           
+								width: 'auto', //auto or any width like 600px
+								fit: true   // 100% fit in a container
+							});
+						});
+						
+					</script>
+						<div class="sap_tabs">
+							<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+								<div class="pay-tabs">
+									<h2>Selecione o tipo de Recibo</h2>
+									  <ul class="resp-tabs-list">
+										  <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span><label class="pic1"></label>Recibo</span></li>
+                                          			  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span><label class="pic5"></label>Cadastro</span></li>
+                                          <li class="resp-tab-item" aria-controls="tab_item-2" role="tab" onclick="exibir()"><span><label class="pic6"></label>Clientes</span></li>   
+                                        <li class="resp-tab-item" aria-controls="tab_item-3" role="tab" onclick="salvos()"><span><label class="pic7"></label>Recibos Salvos</span></li>
+										  <div class="clear"></div>
+									  </ul>	
+								</div><form action="recibo.html" method="get">
+								<div class="resp-tabs-container">
+									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+										<div class="payment-info">
+											<h3>Informações do Comprovante</h3>
+								
+												<div class="tab-for">				
+													<h5>Valor:</h5>
+														<input type="text" value="" name="valor" id="valor">
+													<h5>Valor(por extenso):</h5>													
+														<input type="text" value="" name='valor_ext' id="valor_ext">
+												</div>			
+												<div class="tab-for">				
+													<h5>Referente:</h5>
+														<input type="text" value="" name="referente" id="referente">
+													<h5>Nome do pagador:</h5>													
+                                                    <input type="text" value=""  name="nomepagador" id="nomepagador">
+                                                    <h5>Email pagador:</h5>
+                                                    <input type="email" class="text_box"  value="" name="emailpagador" id="emailpagador">
+                                                                   <h5>Celular:</h5>
+                                                    <input type="number" class="text_box"   value="" name="celularpagador" id="celularpagador">
+                                                      <h5>CPF/CNPJ do pagador:</h5>													
+														<input type="text" value="" name="idpagador" id="idpagador">
+												</div>	
+												<div class="transaction">
+													<div class="tab-form-left user-form">
+														<h5>Cheque:</h5>
+															<ul>
+																<li>
+																	<h6>Nº:</h6><input type="number" class="text_box" type="text" name="n" id="n"/>	
+																</li>
+                                                                <li>
+                                                                <h6>Banco:</h6><input type="text" class="text_box" value="" name="banco" id="banco"/>
+                                                                </li>
+																<li>
+																	<h6>Agência:</h6><input type="number" class="text_box" type="text" value="" name="ag" id="ag"/>
+																</li>
+																
+															</ul>
+													</div>
+													<div class="tab-form-right user-form-rt">
+														
+													</div>
+													<div class="clear"></div>
+                                                    <div class="tab-for">	
+                                                        <h6>Cidade/Estado:</h6><input type="text" class="text_box" value="" name="cidade" id="cidade" onblur="mostrar()"/>
+                                                        <h6>Nome do Emitente:</h6><input type="text" class="text_box" value="" name="nome_emitente" id="nome_emitente" />
+                                                        <h6>CPF/CNPJ do Emitente:</h6><input type="text" class="text_box" value="" name="id_emitente" id="id_emitente"/>
+                                                        <h6>RG do Emitente:</h6><input type="text" class="text_box" value="" name="rg_emitente" id="rg_emitente"/>
+                                                        <h6>Email do Emitente:</h6><input class="text_box" type="email" value="" name="email_emitente" id="email_emitente"/>
+                                                    </div>
+												</div>
+												
+											<div class="single-bottom">	
+                                                <input type="submit" value="Gerar" name="enviar"/>
+                                            </form>
+											</div>
+										</div>
+                                    </div>
+                                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+										<div class="payment-info" id="IncluirCliente">
+											<h3>Cadastro Cliente</h3>		
+                                            <div class="tab-for">
+                                                
+<div id="teste"></div>
+													<h5>Nome do pagador:</h5>													
+														<input type="text" value="" name="nome_pagador" id="NomeCliente">
+                                                    <h5>Email pagador:</h5>
+                                                    <input type="email" class="text_box"  value="" name="email_pagador" id="EmailCliente">
+                                                                   <h5>Celular:</h5>
+                                                    <input type="number" class="text_box"   value="" name="celular_pagador" id="CelularCliente">
+                                                      <h5>CPF/CNPJ do pagador:</h5>													
+														<input type="text" value="" name="id_pagador" id="CPFCliente">
+												</div>		
+											<div class="single-bottom">	
+                                                <input type="button" value="Cadastrar" id="IncluirCliente" onclick="cadastrar()"/>
+											</div>
+                                            <script type="text/javascript" src="js/bd-cliente.js"></script>
+										</div>
+                                    </div>
+                                   <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+										<div class="payment-info">
+											<h3>Clientes</h3>	
+                                            <div id='clientes'></div>
+            
+											</div>
+										    </div>
+                                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+										<div class="payment-info">
+											<h3>Recibos</h3>	
+                                            <div id='recibo'></div>
+            <div id='mostrar'></div>
+											</div>
+										</div>
+                                    </div>
+								</div>	
+							</div>
+						</div>	
+
+		</div>
+	</div>
+</body>
+</html>
